@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Sentiment Watch</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100%;
+      background: #0e0e12;
+      color: #f3f4f6;
+      overflow: hidden;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.4;
+      transform: translate(-50%, -50%);
+    }
+
+    .blob-1 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #5eead4, #0ea5e9);
+      top: 20%;
+      left: 30%;
+      animation: float1 15s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .blob-2 {
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, #f472b6, #8b5cf6);
+      top: 70%;
+      left: 60%;
+      animation: float2 18s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .blob-3 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #facc15, #f97316);
+      top: 50%;
+      left: 90%;
+      animation: float3 20s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes float1 {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -60%) scale(1.1); }
+    }
+
+    @keyframes float2 {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-40%, -45%) scale(1.2); }
+    }
+
+    @keyframes float3 {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-55%, -55%) scale(0.9); }
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 4rem 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #f9fafb;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #d1d5db;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #94a3b8;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <div class="content">
+    <h1>Sentiment Watch</h1>
+    <p>
+      <strong>Sentiment Watch</strong> (codename: *The Out Trap*) is a lightweight observatory for social pulse-checking,
+      using publicly available Reddit data to track trends, detect shifts in sentiment, and surface topics with
+      high emotional charge or polarization.
+    </p>
+    <p>
+      This tool interacts with Reddit via approved API endpoints and (in compliance with Reddit's terms) uses read-only,
+      rate-limited access to aggregate public conversations. The purpose is simple: transparency into the voice of the crowd,
+      without contributing noise.
+    </p>
+    <p class="tagline">No influence, just insight.</p>
+  </div>
+</body>
+</html>
